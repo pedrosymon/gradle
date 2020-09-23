@@ -36,7 +36,7 @@ public class TaskPathProjectEvaluator implements ProjectConfigurer {
         // Need to configure intermediate parent projects for configure-on-demand
         ProjectInternal parentProject = project.getParent();
         if (parentProject != null && parentProject != project.getRootProject()) {
-            configure(project.getParent());
+            configure(parentProject);
         }
         project.evaluate();
     }
